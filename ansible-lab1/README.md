@@ -17,7 +17,7 @@
 
 ### Copy hosts file on ansible-control
 ``` shell
-cp /vagrant/hosts_file /etc/hosts 
+sudo cp /vagrant/hosts_file /etc/hosts 
 ```
 
 ### Install Ansible

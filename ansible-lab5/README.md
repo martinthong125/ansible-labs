@@ -21,7 +21,7 @@ ansible-playbook -i hosts -K playbook1.yml
 3. Run playbook and test
 
 ``` shell
-ansible-galaxy init roles/nginx
+ansible-galaxy init roles/common
 ansible-playbook -i hosts -K playbook1.yml
 ```
 
@@ -33,4 +33,16 @@ ansible-playbook -i hosts -K playbook1.yml
 ``` shell
 ansible-galaxy init roles/nginx
 ansible-playbook -i hosts -K playbook1.yml
+```
+
+### webservers, loadbalancer error?
+
+1. ssh into web01
+2. Edit /etc/resolv.conf
+3. Add in nameserver 8.8.8.8
+
+### Test output
+``` shell
+curl web01:8000
+curl loadbalancer
 ```

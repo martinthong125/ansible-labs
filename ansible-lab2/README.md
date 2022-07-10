@@ -8,8 +8,11 @@
 ### Install Services using APT module
 https://docs.ansible.com/ansible/latest/modules/apt_module.html
 ``` shell
+# run apt update on all servers
 ansible all -i hosts --become -m apt -a "update_cache=yes"
+# run apt install apache2 on webservers 
 ansible webservers -i hosts --become -m apt -a "name=apache2 state=present"
+# run apt install mysql-server on database
 ansible database -i hosts --become -m apt -a "name=mysql-server state=present"
 ```
 

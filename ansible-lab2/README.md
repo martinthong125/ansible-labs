@@ -20,7 +20,7 @@ ansible database -i hosts -m service -a "name=mysql state=started"
 ansible database --become -i hosts -m service -a "name=mysql state=restarted"
  ```
 
-### Use Ansible to reboot the webstack
+### Use Ansible to reboot the webstack, will need to stop and restart the servers manually
 ``` shell
 ansible webstack -i hosts --become -a "reboot --reboot"
  ```

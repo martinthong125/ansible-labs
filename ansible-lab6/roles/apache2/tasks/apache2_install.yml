@@ -12,10 +12,11 @@
     src: templates/index.html.j2
     dest: /var/www/html/index.html
   notify:
-  - restart apache
+    - restart apache
   tags: configuration
 
 - name: ensure apache is running
   service:
     name: apache2
     state: started
+  tags: always
